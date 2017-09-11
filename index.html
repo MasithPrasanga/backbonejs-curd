@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>employee</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+</head>
+<body>
+
+<div class="container">
+	<h1>Employee CRUD Application</h1>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>FirstName</th>
+				<th>LastName</th>
+				<th>Salary</th>
+				<th>Action</th>
+			</tr>
+			<tr>
+				<td><input class="form-control firstname-input"></td>
+				<td><input class="form-control lastname-input"></td>
+				<td><input class="form-control salary-input"></td>
+				<td><button class="btn btn-primary add-employee">Add</button></td>
+			</tr>
+		</thead>
+		<tbody class="employee-list"></tbody>
+	</table>
+
+</div>
+
+	<script type="text/template" class="employee-list-template">
+		<td><span class="firstname"><%= firstName%></span></td>
+		<td><span class="lastname"><%= lastName%></span></td>
+		<td><span class="salary"><%= salary%></span></td>
+		<td>
+			<button class="btn btn-warning edit-employee">Edit</button>
+			<button class="btn btn-danger delete-employee">Delete</button>
+			<button class="btn btn-success update-employee" style="display:none;">Update</button>
+			<button class="btn btn-danger cancel" style="display:none">Cancel</button>
+		</td>
+	</script>
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/underscore.js"></script>
+	<script type="text/javascript" src="js/backbone.js"></script>
+	<script type="text/javascript" src="employee.js"></script>
+
+</body>
+</html>
+
+
